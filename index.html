@@ -4,16 +4,28 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PSB QR Generator</title>
-    <link rel="stylesheet" href="assets/css/foundation.css">
-    <link rel="stylesheet" href="assets/css/app.css">
+		<title>PSB QR Generator</title>
+		<link rel="shortcut icon" href="assets/img/tool.png" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,700i,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/foundation.min.css">
+		<link rel="stylesheet" href="assets/css/app.css">
   </head>
   <body>
     <div class="grid-container">
       <div class="grid-x grid-padding-x" id="header">
 				<div class="large-6 cell float-center">
 					<h1>PSB QR Code Generator</h1>
+					<p>QR Generator for PSB Supply Chain.</p>
+					<p class="instructions"><strong>Instructions:</strong> </p>
+					<ol>
+						<li>Input a comma-separated list of Item Masters in the Item Master field</li>
+						<li>Click on Generate Table</li>
+						<li>In the table, choose the brand that uses that Item Master</li>
+						<li>Click on Generate QR to generate a QR Code</li>
+					</ol>
+					<hr />
 					<div class="technically-the-form">
+						<label>Item Master</label>
 						<input id="item_master" class="form-options" type="text" placeholder="Item Master" value="">
 					</div>
 					<button class="generate button">Generate Table</button>
@@ -23,6 +35,8 @@
 				<div class="large-6 cell">
 					<h2>Generated QR Code</h2>
 					<div class="qr-container">
+						<div class="dummy-name"></div>
+						<div class="dummy-qr"></div>
 					</div>
 				</div>
       </div>
