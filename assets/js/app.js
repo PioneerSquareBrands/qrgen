@@ -38,12 +38,13 @@ $(document).on('click', '.item-generate', function(e) {
 	else if (brand = 'bh') {
 		brandURL = 'https://brenthaven.com/';
 	}
-	console.log(brand);
+
 	var qrcode = brandURL + itemMaster;
+	var size = 400;
 
 	$('.qr-container').html('');
 	$('.qr-container').append('<div class="generated-qrlink">' + qrcode + '</div>');
-	$('.qr-container').qrcode({width: 300, height: 300, text: qrcode});
+	$('.qr-container').qrcode({width: size, height: size, text: qrcode});
 	$('.qr-container').append('<div><button class="button download-button">Download Image</button></div>');
 	$('.qr-container').attr('data-name', brand + '-' + itemMaster);
 });
