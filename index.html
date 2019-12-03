@@ -1,0 +1,37 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="assets/css/foundation.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-x grid-padding-x" id="header">
+				<div class="large-6 cell float-center">
+					<h1>PSB QR Code Generator</h1>
+					<div class="technically-the-form">
+						<input id="item_master" class="form-options" type="text" placeholder="Item Master" value="">
+					</div>
+					<button class="generate button">Generate Table</button>
+					<div class="the-table-thing">
+					</div>
+				</div>
+				<div class="large-6 cell">
+					<h2>Generated QR Code</h2>
+					<div class="qr-container">
+					</div>
+				</div>
+      </div>
+    </div>
+
+    <script src="assets/js/vendor/jquery.js"></script>
+    <script src="assets/js/vendor/what-input.js"></script>
+		<script src="assets/js/vendor/foundation.js"></script>
+		<script src="assets/js/vendor/jquery.qrcode.min.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
