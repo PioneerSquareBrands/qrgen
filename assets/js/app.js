@@ -5,7 +5,7 @@ $(document).on('click', '.generate.button', function() {
 	$('.the-table-thing').html('');
 	$('.the-table-thing').append('<div class="generated-table"></div>');
 	for (i=0; i < itemMaster.length; i++){
-		var item = itemMaster[i].replace(/\+/g, '');
+		var item = itemMaster[i].replace(/ /g, '');
 		$('.generated-table').append('<div class="item" data-index="' + i + '">' +
 																	 '<div class="item-name">' + 
 																			item + 
@@ -23,11 +23,11 @@ $(document).on('change', 'input[name*="brand-"]', function() {
 	$(this).parents('.item').find('.item-generate button').prop('disabled', false);
 });
 
-$(document).on('click', '.item-generate', function(e) {
+$(document).on('click', '.item-generate button', function(e) {
 	e.preventDefault();
-	var item = $(this).parent('.item');
+	var item = $(this).parents('.item');
 	var index = item.data('index');
-	var itemMaster = item.find('.item-name').text().replace(' ', '');
+	var itemMaster = item.find('.item-name').text().replace(/ /g, '');
 
 	var brand = item.find('.brand-selector input[name="brand-' + index + '"]:checked').val();
 	var brandURL;
